@@ -23,6 +23,8 @@
 \newtheorem{teor}{Teorema}[section]
 \newtheorem{defi}{Definici\'on}[section]
 \newcommand{\coker}{\operatorname{coker}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\G}{\mathcal{G}}
 
 \title{Rigidity, Mapping  Class Groups  and Stochastic Topology. }
 \author{No\'e B\'arcenas.\\ Joint work with O. Arizmendi \\  and R.Ch\'avez C\'aliz.}
@@ -59,7 +61,11 @@ Let  $S$  be  a 2- dimensional  smooth  manifold without  boundary. \pause
 $S$  can  be  furnished  with  a Riemannian  Metric, even with  a  complex structure. \pause Is  it  unique? \pause
 NO. \pause 
 
-%%%%% HERE  THERE  WILL BE  A  PICTURE  OF  A  SURFACE 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.35]{CHARLA_STOCHASTIC_TOPOLOGY_MCG_CIMATNOVEMBER_2018/multitorus.png}
+	\caption{Surface of gender 3}
+\end{figure}
 
 There  is  a  whole  space $T(S)$ of  complex  structures  on  $S$. \pause (Homeomorphic  to  an  euclidean Ball  of  dimension $6g-6$  if  the  surface  has  genus  $g$). \pause 
 
@@ -82,12 +88,22 @@ But homeomorphisms  that  are homotopic   to the  identity fix  the  complex str
 Consider a  closed  surface. A  curve  $\alpha$ inside  it  is  the  image of  a  continuous  map. It  is  essential if no component of $S-\alpha$ is  a  disk.      
 We  will  consider   now  the (discrete) collection of isotopy classes   of  essential  curves.
 
-%%%%%%%%%%%%%HERE  THERE  WILL BE  A  PICTURE  OF  SOME ESSENTIAL CURVES
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.2]{CHARLA_STOCHASTIC_TOPOLOGY_MCG_CIMATNOVEMBER_2018/Pantalones.png}
+	\caption{Some essential curves}
+\end{figure}
 
+\end{frame}
+\begin{frame} \frametitle{The  curve  complex}
 
 And  we  will  put  an edge  connecting  them  if   they  admit  a realization  without  intersection. 
 
-%%%%%%%%%%%%%%HERE  THERE  WILL  BE  RICARDO'S THESIS  PICTURE: %%% INCLUDE  LOCALLY  INFINITE
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.25]{CHARLA_STOCHASTIC_TOPOLOGY_MCG_CIMATNOVEMBER_2018/Locally-infinite.png}
+	\caption{Construction of the curve complex}
+\end{figure}
 
 One  gets  a simplicial  (flag) complex,  denoted  by $\mathcal{C}(S)$, the  curve  complex. \pause  
 \end{frame}
@@ -199,36 +215,61 @@ Fruitful  insights  from  Octavio Arizmendi, \pause but  also a  group  of  expe
 
 \end{frame}
 
-
-\begin{frame}
-\frametitle{The four theorems}
-\end{frame}
-
 \begin{frame}
 \frametitle{Connectedness}
+
+\begin{theorem}
+Let $\omega(n)$ be a function that tends to infinity arbitrarily slow as $n$ tends to infinity
+\begin{itemize}
+\item If $p\geq \frac{log(n)+ \omega(n)}{n}$ then 
+$$\lim_{n \to \infty} \P(G \in \G(n,p) \text{ is connected}) = 1$$
+\item If $p\leq \frac{log(n)- \omega(n)}{n}$ then
+$$\lim_{n \to \infty} \P(G \in \G(n,p) \text{ is disconnected}) = 1$$
+\end{itemize}
+\end{theorem}
 
 \end{frame}
 
 \begin{frame}
 \frametitle{Vertices have  infinite  degree}
+\begin{theorem}
+Let $\epsilon>0$ be fixed, $\epsilon n^{-3/2} \leq p = p(n) \leq 1 - \epsilon n^{-3/2}$, let $k = k(n)$ be a natural number and set $\lambda_{k} = \lambda_{k}(n) = n\cdot b(k;n - 1,p)$. Then the following assertions hold.
 
+\begin{itemize}
+\item If $\lim \lambda_{k}(n) = 0$, then $\lim P(X_{k} = 0) = 1$. 
+\item If $\lim \lambda_{k}(n) = \infty$, then $\lim P(X_{k} > t) = 1$
+for every fixed $t$.
+\item If $0 < \lim\lambda_{k}(n) < \lim \lambda_{k}(n) < \infty$,
+then $X_{k}$ has asymptotically Poisson distribution with mean $\lambda_{k}$: 
+$$P(X_{k} = r) \sim e^{\lambda_{k}}\cdot \lambda_{k}^{r}/ r!$$
+for every fixed $r$.
+\end{itemize}
+\end{theorem}
 \end{frame}
 
 \begin{frame}
 
-\frametitle{Clique Number  and assymptotics  of  genera.}
-
+\frametitle{Clique Number  and asymptotic  of  genera.}
+\begin{theorem}
+Let $r = r(n) = O(n^{1/3})$ and let $p=p(n)$, $0<p<1$, be such that
+$$\binom{n}{r} p^{\binom{r}{2}} \to \infty \text{ and } \binom{n}{r+1} p^{\binom{r+1}{2}} \to 0 $$
+Then a.e $G_{p}$ has clique number $r$
+\end{theorem}
 \end{frame}
 
 \begin{frame}\frametitle{Infinite  diameter}
-
+\begin{theorem}
+Let $c$ be a positive constant, $d=d(n)\geq 2$ a natural number, and define $p=p(n,c,d), 0<p<1$, by
+$$p = \frac{\big( n\cdot log(n^2/c)\big) ^{1/d}}{n}$$
+Suppose that $pn/(log\text{ }n)^{3} \to \infty$. Then in $G(n,p)$ we have
+$$\lim_{n\to \infty} \P (diam\text{ }G = d) = e^{-c/2} \text{ and }  \lim_{n\to \infty} \P (diam\text{ }G = d+1) = 1 - e^{-c/2}$$
+\end{theorem}
 \end{frame}
 
 
-\section{aaaa }
+\section{Rigidity }
 \begin{frame}
 
-a
 \end{frame}
 
 \end{document}
