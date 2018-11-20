@@ -35,7 +35,11 @@
 \titlepage
 \end{frame}
 
-
+\begin{frame}
+\frametitle{Overview}
+We propose the use of random topology to provide a probabilistic insight to the specific phenomena: \textbf{rigidity}.\\
+For this, we will first motivate the study of rigidity in the curve complex associated to a surface, after that we can give the stochastic approach.
+\end{frame}
 
 \section{Rigidity}
 
@@ -87,7 +91,7 @@ $$ Mod(S)= Homeo^{+}(S)\diagup Homeo_{0}(S). \pause $$
 
 
 \begin{frame}\frametitle{Curve complex }
-How to understand $Mod(S)$?\pause
+\textbf{How to understand $Mod(S)$? }\pause
 Consider a  closed  surface. A  curve  $\alpha$ inside  it  is  the  image of  a  continuous  map. It  is  essential if no component of $S-\alpha$ is  a  disk.      
 We  will  consider   now  the (discrete) collection of isotopy classes   of  essential  curves.
 
@@ -133,11 +137,11 @@ Version  of  Margulis Superrigidity Theorem.
 \section{Rigidity in random graphs}
 \begin{frame}
 
-Recall  the  curve  complex, $\mathcal{C}(S_g)$ is a flag complex of a \textbf{graph} which satisfied the following properties>
+Recall  the  curve  complex, $\mathcal{C}(S_g)$ is a flag complex of a \textbf{graph}. We have the following theorem
 
  \begin{theorem}
 Let  $S_g$ be  a  genus  $g$  closed  surface, where  $g$  is t  least $2$. 
-The  curve  complex  has  the  following  properties: 
+The  curve  graph  has  the  following  properties: 
 \begin{itemize}
 \item  It  is  connected. 
 \item Every  vertex  has  infinite degree. 
@@ -180,7 +184,7 @@ $$ V(Y) \cup \{ v\in V(\Gamma) :  \exists A \subset V(Y) \text{ where } v = <A> 
 
 %The more  involved  one, but also  adressed here: Luo's proof  of  rigidity  of  the  curve  complex.  \pause 
 %\end{frame}
-\section{Stochastic topology}
+\section{Stochastic model}
 \begin{frame}{Why Stochastic topology?}
 \begin{itemize}
     \item We would like to answer the rather vague question: \textbf{How common is rigidity?}
@@ -208,7 +212,54 @@ Fruitful  insights  from  Octavio Arizmendi, \pause but  also a  group  of  expe
 
 \end{frame}
 
-\section{Parameters of the model}
+
+\begin{frame}{Rigidity calculations}
+With this model in mind we have the following calculations to study rigidity phenomena.
+
+\begin{itemize}
+\item What is the probability that a vertex $v$ is uniquely determined by a set of size $k$? (Event $E_1$)
+ \item What is the probability that a set of size $k$ generate a rigid expansion? (Event $E_3$)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Uniquely determined vertex}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.8]{CHARLA_STOCHASTIC_TOPOLOGY_MCG_CIMATNOVEMBER_2018/uni.png}
+	\caption{Probability of uniquely determined vertices}
+\end{figure}
+
+If $<A> = v$ with $|A| = m$ there's a edge between $v$ and every vertex in $A$, and none of the $n-m-1$ remaining vertices is also connected to every vertex in $A$, i.e.
+$$\P(E_1(m)) = p^{m}(1-p^{m})^{n-m-1}$$
+
+\end{frame}
+
+\begin{frame}
+For the second question we have that if $A_k$ does not generate a rigid expansion is because none of the possible subsets of $A_k$ determined uniquely a vertex outside of $A_k$. 
+
+We have that the probability that none of the vertices outside of $A_k$ is uniquely determined by $A_m\subset A_k$ is $\rho_{m,k} = (1 -  \P(E_1(m) )^{n-k}$.
+
+$$\P(A_k \text{ generates a rigid expansion}) = 1 -  \Pi_{m=1}^{k} (\rho_{k,m})^{\binom{k}{m}}  $$
+
+\end{frame}
+
+\begin{frame}{Calculations}
+    
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.35]{CHARLA_STOCHASTIC_TOPOLOGY_MCG_CIMATNOVEMBER_2018/fixed-uniq-det.png}
+	\caption{Probability of uniquely determined vertex, varying $k$ in $A_k$}
+\end{figure}
+\end{frame}
+\begin{frame}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.35]{CHARLA_STOCHASTIC_TOPOLOGY_MCG_CIMATNOVEMBER_2018/rig-prob.png}
+	\caption{Probability of having a rigid expansion,  varying $k$ in $A_k$}
+\end{figure}
+\end{frame}
 \begin{frame}
 \frametitle{Connectedness}
 
@@ -258,6 +309,12 @@ $$p = \frac{\big( n\cdot log(n^2/c)\big) ^{1/d}}{n}$$
 Suppose that $pn/(log\text{ }n)^{3} \to \infty$. Then in $G(n,p)$ we have
 $$\lim_{n\to \infty} \P (diam\text{ }G = d) = e^{-c/2} \text{ and }  \lim_{n\to \infty} \P (diam\text{ }G = d+1) = 1 - e^{-c/2}$$
 \end{theorem}
+\end{frame}
+
+\begin{frame}
+   \begin{center}
+       Thanks!
+   \end{center} 
 \end{frame}
 
 \end{document}
