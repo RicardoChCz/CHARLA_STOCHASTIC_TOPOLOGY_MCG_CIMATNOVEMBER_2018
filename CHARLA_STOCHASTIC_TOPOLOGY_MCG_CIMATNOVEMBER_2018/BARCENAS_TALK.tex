@@ -117,10 +117,10 @@ One  gets  a simplicial  (flag) complex,  denoted  by $\mathcal{C}(S)$, the  cur
 \begin{frame} \frametitle{Rigidity  of  the  Curve  complex}
  The mapping class group acts on the Curve complex.
 
-\begin{theorem}[Luo]
+\begin{theorem}[Ivanov, Korkmaz and Luo]
 
-Let  $S$  be  a  closed  surface  of  genus  at  least  $2$. The (simplicial) automorphisms  of the curve complex $\mathcal{C}$ are  in bijective correspondence  with  isotopy classes of homeomorphisms  of  the  surface.   \pause 
-$$Aut(\mathcal{C}(S))\cong Mod^{*}(S).\pause $$
+Let  $S$  be  a  closed  surface  of  genus  greater than  $2$. The (simplicial) automorphisms  of the curve complex $\mathcal{C}$ are  in bijective correspondence  with  isotopy classes of homeomorphisms  of  the  surface.   \pause 
+$$Aut(\mathcal{C}(S))\cong Mod(S).\pause $$
 \end{theorem}
 
 \end{frame}
@@ -128,7 +128,7 @@ $$Aut(\mathcal{C}(S))\cong Mod^{*}(S).\pause $$
 \begin{frame}
 Here, such classes  are  responsible  for  the  rigidity  phenomenon. \textbf{The  automorphisms  of  the  curve  complex  are  all geometric}.\pause  The  group  of simplicial   automorphism  of  the  curve  complex  is  the  extended  Mapping  Class group. \pause Ivanov's Rigidity  meta-conjecture.
 
-Version  of  Margulis Superrigidity Theorem. 
+There are versions  of Mostow's Rigidity and Margulis' Superrigidity Theorem. 
  
 
 \end{frame}
@@ -153,7 +153,7 @@ The  curve  graph  has  the  following  properties:
 
 \begin{frame}{Rigidity in graphs}
     \begin{definition}
-Let $\Gamma$ be a simplicial graph and let $H<\Gamma$ be a vertex-induced subgraph. A function $f:y\to \Gamma$ is \textbf{locally injective} if $f|_{star(v)}$\footnote{The $star(v)$ is the vertex-induced subgraph with vertices $\{ v \} \cup N(v)$ ($v$ plus its neighborhood).} is injective for all $v \in V(y)$. 
+Let $\Gamma$ be a simplicial graph and let $H<\Gamma$ be a vertex-induced subgraph. A function $f:H\to \Gamma$ is \textbf{locally injective} if $f|_{star(v)}$\footnote{The $star(v)$ is the vertex-induced subgraph with vertices $\{ v \} \cup N(v)$.} is injective for all $v \in V(y)$. 
 \end{definition}
 
 \begin{definition}
@@ -162,9 +162,9 @@ $H<\Gamma$ is \textbf{rigid} if every locally injective function defined in $H$ 
 \end{frame}
 
 \begin{frame}
-A vertex $v \in V$ in a graph it's called to be uniquely determined by $A\subset V(G)$, denoted $v=<A>$, if $v$ is the unique neighbor of every element of $B$, i.e.
+A vertex $v \in V$ in a graph is \textbf{uniquely determined} by $A\subset V(G)$, denoted $v=<A>$, if $v$ is the unique neighbor of every element of $B$, i.e.
 
-$$ \{ v \} = \bigcap_{w\in B} lnk(w) $$
+$$ \{ v \} = \bigcap_{w\in B} N(w) $$
 
 \begin{definition}
 The first rigid expansion of $Y\subset \Gamma$ is the vertex-induced subgraph whose vertices are
@@ -188,7 +188,7 @@ $$ V(Y) \cup \{ v\in V(\Gamma) :  \exists A \subset V(Y) \text{ where } v = <A> 
 \begin{frame}{Why Stochastic topology?}
 \begin{itemize}
     \item We would like to answer the rather vague question: \textbf{How common is rigidity?}
-    \item Doing rigid expansion by hand its hard
+    \item Doing rigid expansion by hand is hard
     \item There is a  whole translation of the mapping class group rigidity phenomenon in terms of random graph theory.
 \end{itemize}    
 \end{frame}
